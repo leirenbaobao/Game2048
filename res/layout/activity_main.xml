@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#C2B8A9"
+    tools:context=".MainActivity" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+	        android:id="@+id/score_line"
+	        android:layout_width="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="10dp"
+	        android:layout_height="60dp"
+	        android:gravity="right"
+	        >
+	        
+	        <TextView
+	            android:id="@+id/text_score"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:textSize="22sp"
+	            android:text="得分:"/>
+	        
+	        <TextView
+	            android:id="@+id/tvScore"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@id/text_score"
+	            android:layout_centerVertical="true"
+	            android:textSize="25sp"/>
+        
+    </RelativeLayout>
+      
+	    <RelativeLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="60dp"
+	        android:layout_gravity="right"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="10dp"
+	        >
+	        <TextView
+	            android:id="@+id/text_history"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:textSize="22sp"
+	            android:text="记录:"/>
+	        
+	        <TextView
+	            android:id="@+id/tvhistory"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@id/text_history"
+	            android:layout_centerVertical="true"
+	            android:textSize="25sp"/>
+	     </RelativeLayout> 
+	     
+    </RelativeLayout>
+    
+    <com.ctrlz.game2048.GameView
+        android:id="@+id/myGridView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/score_line"
+        android:background="#bbada0"
+        >
+    </com.ctrlz.game2048.GameView>
+    
+        <RelativeLayout
+	        android:id="@+id/about_line"
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        >
+	        
+	        <TextView
+	            android:id="@+id/presents"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="25dp"
+	            android:layout_centerVertical="true"
+	            android:text="Ctrl+Z presents  QQ:1058920360"/>
+	        
+	        <LinearLayout
+		        android:id="@+id/AdLinearLayout"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:gravity="center_horizontal"
+        		/>
+	        
+	    </RelativeLayout>
+    
+</LinearLayout>
